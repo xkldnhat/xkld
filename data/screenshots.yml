@@ -1,0 +1,12 @@
+---
+enable: true
+title: Thư viện hình ảnh
+description: Hình ảnh hoạt động học & phỏng vấn của học viên VietNam Peace.
+
+images:
+  - url: images/screenshots/slider1.png
+  - url: images/screenshots/slider2.png
+  - url: images/screenshots/slider3.png
+  - url: images/screenshots/slider4.png
+  - url: images/screenshots/slider5.png
+  - url: images/screenshots/slider3.png

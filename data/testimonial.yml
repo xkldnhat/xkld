@@ -1,0 +1,24 @@
+---
+enable: true
+title: THỰC TẬP SINH NÓI GÌ VỀ CHÚNG TÔI
+description: Sau nhiêu năm hoạt động trong ngành, di sản của Jgo là những lời khen tặng và góp ý từ những khách hàng đã sử dụng dịch vụ của chúng tôi. Đó chính là bằng chứng nhận quý giá và công bằng nhất!
+comments:
+  - text: Được sự tư vấn từ xuất khẩu lao động VietNam Peace, tôi đã có thể đặt chân sang Nhật Bản làm việc với mức thu nhập ổn định. 
+    name: Hải Đào
+    designation: Thực tập sinh nội thất
+    image: images/client/client-2.png
+
+  - text: Nhờ JGO mà bây giờ mình đã được là thực tập sinh năm 3 tại Nhật Bản. JGO là trang thông tin xkld uy tín đáng tin cậy cho người lao động cùng với sự đào tạo thân thiện. Mình
+    name: Phan Cường
+    designation: Thực tập sinh vận hành máy
+    image: images/client/client-1.png
+
+  - text: Tôi đã có cơ hội được trưởng thành, được tiếp thu nền văn hóa và làm việc tại xứ xở hoa anh đào. Hi vọng JGO luôn đưa đến những đơn hàng và dịch vụ tốt cho người lao động  
+    name: Hoài Phương
+    designation: Thực tập sinh siêu thị
+    image: images/client/client-3.png
+     
+  - text: Tôi đã có cơ hội được trưởng thành, được tiếp thu nền văn hóa và làm việc tại xứ xở hoa anh đào. Hi vọng JGO luôn đưa đến những đơn hàng và dịch vụ tốt cho người lao động
+    name: Thành Xuân
+    designation: Thực tập sinh sơn
+    image: images/client/client-1.png

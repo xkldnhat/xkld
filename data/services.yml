@@ -1,0 +1,16 @@
+#  icons can be found on https://themify.me/themify-icons
+---
+enable: true
+title: Tại sao chọn VietNam Peace?
+services:
+  - icon: ti-check-box
+    title: Đơn hàng chọn lọc
+    description: Ưu tiên lựa chọn những đơn hàng truyền thống và những đơn hàng có mức lương cao.
+
+  - icon: ti-write
+    title: Chi phí thấp nhất
+    description: Với trung tâm giảng dạy tại Hà Nội, Đà Nẵng, VietNam Peace tối ưu chi phí thấp nhất cho người lao động.
+
+  - icon: ti-key
+    title: Xuất cảnh nhanh
+    description: Với quy trình trúng tuyển đơn hàng mới đào tạo. Sau khi trúng tuyển từ 4-5 tháng là xuất cảnh.
