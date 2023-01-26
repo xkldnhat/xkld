@@ -1,5 +1,7 @@
 ---
 title: "Tổng hợp các câu hỏi và câu trả lời phỏng vấn tiếng Nhật"
+description: >
+  Bí kíp trả lời phỏng vấn tiếng Nhật, tăng cao cơ hội đậu đơn hàng xkld
 date: 2023-01-26T11:57:56+06:00
 featureImage: images/blog/Tong-hop-cac-cau-hoi-va-cau-tra-loi-phong-van-tieng-Nhat/Tong-hop-cac-cau-hoi-va-cau-tra-loi-phong-van-tieng-Nhat.webp
 author: Dai Cine
