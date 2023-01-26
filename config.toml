@@ -1,5 +1,5 @@
 # MAIN base
-baseURL = "https://apsho-hugo.netlify.app/"
+baseURL = "https://xkld.pages.dev/"
 languageCode = "vi-VN"
 title = "VietNam Peace | Công ty xuất khẩu lao động Nhật Bản uy tín"
 theme = "vnhb"
@@ -8,15 +8,15 @@ removePathAccents = true
 
 # Navigation Bar
 [[menu.main]]
-    name = "Home"
+    name = "Trang Chủ"
     url = "#hero"
     weight = 1
 [[menu.main]]
-    name = "About"
+    name = "Giới Thiệu"
     url = "#feature"
     weight = 2
 [[menu.main]]
-    name = "Services"
+    name = "Hỏi Đáp"
     url = "#faq"
     weight = 3
 [[menu.main]]
@@ -26,11 +26,11 @@ removePathAccents = true
 
 # Footer Sitemap
 [[menu.sitemap]]
-    name = "Home"
+    name = "Trang Chủ"
     url = "#"
     weight = 1
 [[menu.sitemap]]
-    name = "Latest Article"
+    name = "Bài Viết Mới Nhất"
     url = "/blog"
     weight = 2
 [[menu.sitemap]]
@@ -38,7 +38,7 @@ removePathAccents = true
     url = "/privacy"
     weight = 3
 [[menu.sitemap]]
-    name = "Contact"
+    name = "Liên Hệ"
     url = "/contact"
     weight = 4
 
@@ -51,8 +51,8 @@ tags = "/tag/:slug/"
 
 # Footer Address
 [params.address]
-address = "23 Khan Niketon, Grand Street, NYK."
-email = "contact@vietnamhoabinh.com"
+address = "Lô 41, Bờ Quan 12, Ngũ Hành Sơn, Đà Nẵng"
+email = "info.vietnamhoabinh@gmail.com"
 phone = "+84 0942.259.111"
 
 # Footer Social
@@ -69,10 +69,10 @@ fabFormURL = "https://fabform.io/f/zWMBVeW"
 googleAnalytics = "UA-175025671-2"
 
 # Footer
-footerTitle = "Get the latest app updates"
+footerTitle = "Cập nhật bản tin mới của VietNam Peace"
 copyright1 = "All right reserved"
 copyright2 = "Copyright ©  <a href=\"https://jgo.vn/\" target=\"_blank\">Jgo</a> {year}"
 
 #contact
-email = "help@staticmania.com"
+email = "info.vietnamhoabinh@gmail.com"
 
