@@ -34,8 +34,8 @@ removePathAccents = true
     url = "/blog"
     weight = 2
 [[menu.sitemap]]
-    name = "Privacy & Policy"
-    url = "/privacy"
+    name = "Chính sách bảo mật"
+    url = "/chinh-sach-bao-mat"
     weight = 3
 [[menu.sitemap]]
     name = "Liên Hệ"
