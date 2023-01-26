@@ -1,19 +1,23 @@
 ---
 enable: true
 title: Câu hỏi thường gặp
-description: Những câu hỏi thường gặp khi bạn muốn đi xuất khẩu lao động Nhật Bản
+description: Những câu hỏi thường gặp khi bạn muốn đi xuất khẩu lao động Nhật Bản?
 faqItem:
-  - question: How to Install Apsho?
-    answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus a, expedita dolorum consequatur magni commodi tempore nesciunt soluta veritatis corporis iste labore eaque aliquam, sapiente debitis dignissimos aut exercitationem minima.
+  - question: Chi phí đi xuất khẩu Nhật Bản?
+    answer: Chi phí xuất khẩu lao đông nhật bản 2023 hiện nay rất rẻ so với những năm trước tùy theo mỗi đơn hàng có mỗi mức phí riêng, tổng chi phí thông thường từ 120 -170 triệu.
     dataTarget: One
     show: show
 
-  - question: Is there any age limit?
-    answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus a, expedita dolorum consequatur magni commodi tempore nesciunt soluta veritatis corporis iste labore eaque aliquam, sapiente debitis dignissimos aut exercitationem minima.
+  - question: Muốn đi Nhật nhưng không có tiền?
+    answer: Tại VietNam Peace chúng tôi có chương trình hỗ trợ vay cho thực tập sinh. Tùy theo đánh giá từng cá nhân. VietNam Peace hỗ trợ mức vay cho mỗi thực tập sinh khác nhau.
     dataTarget: Two
     show: 
     
-  - question: How much it costs to get started?
-    answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus a, expedita dolorum consequatur magni commodi tempore nesciunt soluta veritatis corporis iste labore eaque aliquam, sapiente debitis dignissimos aut exercitationem minima.
+  - question: Nên chọn công việc gì khi đi xuất khẩu Nhật Bản?
+    answer: VietNam Peace luôn lựa chọn những đơn hàng tốt nhất cho thực tập sinh xkld Nhật Bản. Như đóng gói, siêu thị, gia công, điện tử, nông nghiệp...
+    dataTarget: Three
+    show: 
+  - question: Nữ có nên đi xuất khẩu Nhật Bản?
+    answer: Các đơn hàng xkld Nhật Bản ưu tiên nữ rất nhiều, với mức lương cao. Các bạn nữ có thể kiếm được công việc tốt, mức lương cao.
     dataTarget: Three
     show: 

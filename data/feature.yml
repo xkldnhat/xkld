@@ -1,15 +1,15 @@
 ---
 enable: true
-title: Ultimate experiences with story, emotion
-description: The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.Error6251 is the best, Bawds jog, flick quartz, vex nymphs.
-description2: Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs.
-buttonText: Try It Free
-Title2nd: Product start analytics with real problems.
-description2nd: The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.Error6251 is the best, Bawds jog, flick quartz, vex nymphs.
-image1: images/feature/feature-illustration-one.svg
-image2: images/feature/feature-illustration-two.svg
+title: Giới thiệu về VietNam Peace
+description: Được thành lập vào tháng 4/2020. Đến đầu năm 2023 Công ty TNHH VIỆT NAM HÒA BÌNH ( VietNam Peace) hàng năm đưa hơn 3.000 thực tập sinh xuất sắc sang các công ty Nhật Bản.
+description2: Chúng tôi đang xây dựng niềm tin mỗi ngày. Hướng tới mục tiêu trở thành công ty đưa người lao động đi làm việc ở nước ngoài hàng đầu VIỆT NAM. Mỗi người trong Công ty TNHH HÒA BÌNH luôn làm việc bằng tất cả sức lực của mình mà không đặt ra giới hạn cho bản thân.
+buttonText: Tư Vấn Ngay
+Title2nd: Mang tới người lao động giá trị tốt nhất
+description2nd: Kể từ khi thành lập, CÔNG TY TNHH HÒA BÌNH VIỆT NAM Dựa trên điều này, chúng tôi cam kết mang tới cho người lao động những giá trị tốt nhất từ những dịch vụ mà chúng tôi cung cấp.
+image1: images/feature/VietNam-Peace.svg
+image2: images/feature/VietNam-Peace-step.svg
 
 checkItem:
-  - text: Next to the hosting account you want to use.
-  - text: Select or enter the domain name you want to use.
-  - text: After you purchase a hosting plan.
+  - text: Mô tả công việc của bạn một cách chi tiết.
+  - text: Giữ chi phí trước khi khởi hành thấp.
+  - text: Cung cấp việc làm tốt nhất.
