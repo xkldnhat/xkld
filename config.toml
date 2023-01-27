@@ -62,6 +62,14 @@ facebook = "https://www.facebook.com/pg/staticmania"
 twitter = "https://twitter.com/static_mania"
 github = "https://github.com/StaticMania"
 
+# Footer Address
+[params.form]
+formID = "1FAIpQLSdtHkRMU85AaZU2KOfuPabl1A56hBxzSriLEP-MZ8SGY_0QkA"
+name = "entry.2005620554"
+phone = "entry.1045781291"
+subject = "entry.1166974658"
+noidung = "entry.839337160"
+
 [params]
 
 # Header
