@@ -4,6 +4,8 @@ languageCode = "vi-VN"
 title = "VietNam Peace | Công ty xuất khẩu lao động Nhật Bản uy tín"
 theme = "vnhb"
 removePathAccents = true
+enableRobotsTXT = true
+
 
 
 # Navigation Bar
@@ -39,7 +41,7 @@ removePathAccents = true
     weight = 3
 [[menu.sitemap]]
     name = "Liên Hệ"
-    url = "/contact"
+    url = "/lien-he"
     weight = 4
 
 [taxonomies]
@@ -67,6 +69,7 @@ github = "https://github.com/StaticMania"
 logo = "images/logo.png"
 fabFormURL = "https://fabform.io/f/zWMBVeW"
 googleAnalytics = "UA-175025671-2"
+description = "Trung tâm đào tạo nguồn nhân lực xuất khẩu lao động Nhật Bản. Xuất khẩu lao động Nhật Bản, tạo ra cơ hội để đạt được ước mơ của bạn."
 
 # Footer
 footerTitle = "Cập nhật bản tin mới của VietNam Peace"
