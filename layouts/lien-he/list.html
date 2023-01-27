@@ -21,27 +21,27 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <form id="contact-form" action="{{ .Site.Params.fabFormURL }}" method="POST" class="contact-form row">
+          <form id="contact-form" action="https://docs.google.com/forms/d/e/{{ .Site.Params.form.formID }}/formResponse" method="POST" class="contact-form row">
             <div class="col-lg-6">
               <input
                 type="text"
                 class="form-control"
                 placeholder="Họ tên"
-                name="Name"
+                name="{{ .Site.Params.form.name }}"
                 required
               />
             </div>
             <div class="col-lg-6">
               <input
-                type="email"
+                type="phone"
                 class="form-control"
-                placeholder="Email"
-                name="email"
+                placeholder="Số Điện Thoại"
+                name="{{ .Site.Params.form.phone }}"
                 required
               />
             </div>
             <div class="col-12">
-              <input type="text" class="form-control" placeholder="Tiêu đề" name="subject" />
+              <input type="text" class="form-control" placeholder="Tiêu đề" name="{{ .Site.Params.form.subject }}" />
             </div>
             <div class="col-12">
               <textarea
@@ -50,7 +50,7 @@
                 required
                 cols="30"
                 rows="7"
-                name="message"
+                name="{{ .Site.Params.form.noidung }}"
               ></textarea>
             </div>
             <div class="col-6 align-self-center">
@@ -68,7 +68,7 @@
               </div>
             </div>
             <div class="col-6 text-right">
-              <button id="contact-form-button" class="btn btn-primary-filled" type="submit" formtarget="_blank">
+              <button id="contact-form-button" class="btn btn-primary-filled" type="submit" formtarget="hidden_iframe">
                 Submit
               </button>
             </div>
