@@ -2,7 +2,6 @@
 baseURL = "https://xkld.pages.dev/"
 languageCode = "vi-VN"
 title = "VietNam Peace | Công ty xuất khẩu lao động Nhật Bản uy tín"
-theme = "vnhb"
 removePathAccents = true
 enableRobotsTXT = true
 
