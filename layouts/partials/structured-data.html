@@ -1,0 +1,93 @@
+{{ $baseURL := "/" | absURL -}}
+
+{{ $dot := . -}}
+{{ $dot.Scratch.Set "path" "" -}}
+{{ $dot.Scratch.Set "breadcrumb" slice -}}
+
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+{{ $.Scratch.Add "path" .Site.BaseURL -}}
+
+{{ $.Scratch.Add "breadcrumb" (slice (dict "url" .Site.BaseURL "name" "home" "position" 1 )) -}}
+  {{ range $index, $element := split $url "/" -}}
+    {{ $dot.Scratch.Add "path" $element -}}
+    {{ $.Scratch.Add "path" "/" -}}
+    {{ if ne $element "" -}}
+    {{ $.Scratch.Add "breadcrumb" (slice (dict "url" ($.Scratch.Get "path") "name" . "position" (add $index 2))) -}}
+  {{ end -}}
+{{ end -}}
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "Jgo.vn - Xuất Khẩu Lao Động Nhật Bản",
+      "alternateName": "Jgo",
+      "url": "https://jgo.vn/",
+      "logo": "https://jgo.vn/wp-content/uploads/2022/11/jgo-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "0944972123",
+        "contactType": "technical support",
+        "contactOption": "TollFree",
+        "areaServed": "VN",
+        "availableLanguage": "Vietnamese"
+      },
+      "sameAs": [
+        "https://twitter.com/jgoxkld",
+        "https://www.pinterest.com/jgoxkld/",
+        "https://jgoxkld.tumblr.com/",
+        "https://www.youtube.com/channel/UCuzNsBkdKpVD9gMl-nCxESQ/about",
+        "https://about.me/jgoxkld",
+        "https://www.behance.net/jgoxkld",
+        "https://www.flickr.com/people/jgoxkld/",
+        "https://flipboard.com/@jgoxkld"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Jgo.vn - Xuất Khẩu Lao Động Nhật Bản",
+      "image": "https://jgo.vn/wp-content/uploads/2022/11/jgo-logo.png",
+      "@id": "https://jgo.vn/",
+      "url": "https://jgo.vn/",
+      "telephone": "0944972123",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lô 41 KĐT Ven Sông, Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+        "addressLocality": "Đà Nẵng",
+        "postalCode": "550000",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 16.0109636,
+        "longitude": 108.2427304
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "07:30",
+        "closes": "20:30"
+      },
+      "sameAs": [
+        "https://twitter.com/jgoxkld",
+        "https://www.pinterest.com/jgoxkld/",
+        "https://jgoxkld.tumblr.com/",
+        "https://www.youtube.com/channel/UCuzNsBkdKpVD9gMl-nCxESQ/about",
+        "https://about.me/jgoxkld",
+        "https://www.behance.net/jgoxkld",
+        "https://www.flickr.com/people/jgoxkld/",
+        "https://flipboard.com/@jgoxkld"
+      ] 
+    }
+    </script>
