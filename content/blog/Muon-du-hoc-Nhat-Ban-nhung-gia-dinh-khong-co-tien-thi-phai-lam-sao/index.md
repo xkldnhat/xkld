@@ -3,7 +3,7 @@ title: "Muốn du học Nhật Bản nhưng gia đình không có tiền thì ph
 description: >
   Chi phí du học Nhật Bản trong một năm là bao nhiêu? Cùng VietNam Peace tìm hiểu tổng chi phí đi nhật nhé
 date: 2023-01-26T11:57:56+06:00
-featureImage: images/blog/chi-phi-du-hoc-nhat-ban.webp
+featureImage: images/blog/hotrovay.webp
 author: Dai Cine
 authorThumb: images/client/client-2.png
 tags: ["Hướng Dẫn"]
