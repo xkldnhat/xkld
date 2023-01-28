@@ -17,77 +17,194 @@
 {{ end -}}
 
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      {{ if eq .Site.Params.schemaType "Organization" -}}
+        "@type": "Organization",
+        "@id": {{ print $baseURL "#/schema/organization/1" }},
+      {{ else -}}
+        "@type": "Person",
+        "@id": {{ print $baseURL "#/schema/person/1" }},
+      {{ end -}}
+      "name": "{{ .Site.Params.schemaName }}",
+      "url": {{ print $baseURL }},
+      "sameAs": [
+        {{ with .Site.Params.schemaTwitter -}}
+        {{ . }}
+        {{ end -}}
+        {{ with .Site.Params.schemaLinkedIn -}}
+        , {{ . }}
+        {{ end -}}
+        {{ with .Site.Params.schemaGitHub -}}
+        , {{ . }}
+        {{ end -}}
+      ],
+      {{ if eq .Site.Params.schemaType "Organization" -}}
+        "logo": {
+          "@type": "ImageObject",
+          "@id": {{ print $baseURL "#/schema/image/1"}},
+          "url": {{ print $baseURL .Site.Params.schemaLogo }},
+          "width": {{ .Site.Params.schemaLogoWidth }},
+          "height": {{ .Site.Params.schemaLogoHeight }},
+          "caption": "{{ .Site.Params.schemaName }}"
+        },
+        "image": {
+          "@id": {{ print $baseURL "#/schema/image/1" }}
+        }
+      {{ else -}}
+        "image": {
+          "@type": "ImageObject",
+          "@id": {{ print $baseURL "#/schema/image/1"}},
+          "url": {{ print $baseURL .Site.Params.schemaImage }},
+          "width": {{ .Site.Params.schemaImageWidth }},
+          "height": {{ .Site.Params.schemaImageHeight }},
+          "caption": "{{ .Site.Params.schemaName }}"
+        }
+      {{ end -}}
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ print $baseURL "#/schema/website/1" }},
+      "url": {{ print $baseURL }},
+      "name": "{{ .Site.Params.title }}",
+      "description": "{{ .Site.Params.description }}",
+      {{ if eq .Site.Params.schemaType "Organization" -}}
+        "publisher": {
+          "@id": {{ print $baseURL "#/schema/organization/1" }}
+        }
+      {{ else -}}
+        "publisher": {
+          "@id": {{ print $baseURL "#/schema/person/1" }}
+        }
+      {{ end -}}
+    },
+    {
+      {{ if and (ne .Kind "taxonomy") (ne .Kind "term") -}}
+        "@type": "WebPage",
+      {{ else -}}
+        "@type": "CollectionPage",
+      {{ end -}}
+      "@id": {{ .Permalink }},
+      "url": {{ .Permalink }},
+      "name": "{{ .Title }}",
+      "description": "{{ .Description }}",
+      "isPartOf": {
+        "@id": {{ print $baseURL "#/schema/website/1" }}
+      },
+      {{ if eq .Site.Params.schemaType "Organization" -}}
+        "about": {
+          "@id": {{ print $baseURL "#/schema/organization/1" }}
+        },
+      {{ else -}}
+        "about": {
+          "@id": {{ print $baseURL "#/schema/person/1" }}
+        },
+      {{ end -}}
+      "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05CET" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05CET" }}",
+      "breadcrumb": {
+        "@id": {{ print .Permalink "#/schema/breadcrumb/1" }}
+      },
+      "primaryImageOfPage": {
+        "@id": {{ print .Permalink "#/schema/image/2" }}
+      },
+      "inLanguage": "{{ .Site.Params.schemaLocale }}",
+      "potentialAction": [{
+        "@type": "ReadAction", "target": [{{ .Permalink }}]
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ print .Permalink "#/schema/breadcrumb/1" }},
+      "name": "Breadcrumbs",
+      "itemListElement": [{{ $list := $.Scratch.Get "breadcrumb" }}{{ $len := (len $list) }}{{ range $index, $element := $list }}{{ if ne .position 1 }},{{ end }}{
+        "@type": "ListItem",
+        "position": {{ .position }},
+        "item": {
+          {{ if ne (add $index 1) $len -}}
+          "@type": "WebPage",
+          "@id": {{ .url }},
+          "url": {{ .url }},
+          "name": "{{ .name | humanize | title }}"
+          {{ else -}}
+          "@id": {{ .url }}
+          {{ end -}}
+        }
+        }{{ end }}]
+    },
+
+    {{ if and (eq .Kind "page") (or (eq .Section "blog") (eq .Section "docs") (eq .Section "tin-tuc") (eq .Section "crypto101") (eq .Section "he-sinh-thai") (eq .Section "showcase")) -}}
     {
       "@context": "https://schema.org",
-      "@type": "Corporation",
-      "name": "Jgo.vn - Xuất Khẩu Lao Động Nhật Bản",
-      "alternateName": "Jgo",
-      "url": "https://jgo.vn/",
-      "logo": "https://jgo.vn/wp-content/uploads/2022/11/jgo-logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "0944972123",
-        "contactType": "technical support",
-        "contactOption": "TollFree",
-        "areaServed": "VN",
-        "availableLanguage": "Vietnamese"
-      },
-      "sameAs": [
-        "https://twitter.com/jgoxkld",
-        "https://www.pinterest.com/jgoxkld/",
-        "https://jgoxkld.tumblr.com/",
-        "https://www.youtube.com/channel/UCuzNsBkdKpVD9gMl-nCxESQ/about",
-        "https://about.me/jgoxkld",
-        "https://www.behance.net/jgoxkld",
-        "https://www.flickr.com/people/jgoxkld/",
-        "https://flipboard.com/@jgoxkld"
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": {{ print $baseURL "#/schema/article/1" }},
+          "headline": "{{ .Title }}",
+          "description": "{{ .Description }}",
+          "isPartOf": {
+            "@id": {{ .Permalink }}
+          },
+          "mainEntityOfPage": {
+            "@id": {{ .Permalink }}
+          },
+          "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05CET" }}",
+          "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05CET" }}",
+          "author": {
+            "@id": {{ print $baseURL "#/schema/person/2" }}
+          },
+          {{ if eq .Site.Params.schemaType "Organization" -}}
+            "publisher": {
+              "@id": {{ print $baseURL "#/schema/organization/1" }}
+            },
+          {{ else -}}
+            "publisher": {
+              "@id": {{ print $baseURL "#/schema/person/1" }}
+            },
+          {{ end -}}
+          "image": {
+            "@id": {{ print .Permalink "#/schema/image/2" }}
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": {{ print $baseURL "#/schema/person/2" }},
+          "name": {{ .Site.Params.schemaAuthor }},
+          "sameAs": [
+            {{ with .Site.Params.schemaAuthorTwitter -}}
+            {{ . }}
+            {{ end -}}
+            {{ with .Site.Params.schemaAuthorLinkedIn -}}
+            , {{ . }}
+            {{ end -}}
+            {{ with .Site.Params.schemaAuthorGitHub -}}
+            , {{ . }}
+            {{ end -}}
+          ]
+        }
+      ]
+    },
+    {{ end -}}
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageObject",
+          "@id": {{ print .Permalink "#/schema/image/2" }},
+          "url": {{ $.Scratch.Get "primaryImage" }},
+          "contentUrl": {{ $.Scratch.Get "primaryImage" }},
+          "caption": "{{ .Title }}"
+        }
       ]
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Jgo.vn - Xuất Khẩu Lao Động Nhật Bản",
-      "image": "https://jgo.vn/wp-content/uploads/2022/11/jgo-logo.png",
-      "@id": "https://jgo.vn/",
-      "url": "https://jgo.vn/",
-      "telephone": "0942259111",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Lô 41, Bờ Quan 12, Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
-        "addressLocality": "Đà Nẵng",
-        "postalCode": "550000",
-        "addressCountry": "VN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 16.0109636,
-        "longitude": 108.2427304
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "07:30",
-        "closes": "20:30"
-      },
-      "sameAs": [
-        "https://twitter.com/jgoxkld",
-        "https://www.pinterest.com/jgoxkld/",
-        "https://jgoxkld.tumblr.com/",
-        "https://www.youtube.com/channel/UCuzNsBkdKpVD9gMl-nCxESQ/about",
-        "https://about.me/jgoxkld",
-        "https://www.behance.net/jgoxkld",
-        "https://www.flickr.com/people/jgoxkld/",
-        "https://flipboard.com/@jgoxkld"
-      ] 
-    }
-    </script>
+
+  ]
+}
+</script>
