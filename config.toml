@@ -1,11 +1,9 @@
 # MAIN base
 baseURL = "https://xkld.pages.dev/"
 languageCode = "vi-VN"
-title = "VietNam Peace | Công ty xuất khẩu lao động Nhật Bản uy tín"
+title = "Việt Nam Hòa Bình (VietNam Peace) | Công ty xuất khẩu lao động Nhật Bản uy tín"
 removePathAccents = true
 enableRobotsTXT = true
-
-
 
 # Navigation Bar
 [[menu.main]]
@@ -44,11 +42,24 @@ enableRobotsTXT = true
     weight = 4
 
 [taxonomies]
-  category = 'categories'
   tag = 'tags'
 
 [permalinks]
 tags = "/tag/:slug/"
+
+# add output format for section sitemap.xml
+[outputFormats.SITEMAP]
+mediaType = "application/xml"
+baseName = "sitemap"
+isHTML = false
+isPlainText = true
+noUgly = true
+rel  = "sitemap"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 # Footer Address
 [params.address]
@@ -58,9 +69,9 @@ phone = "+84 0942.259.111"
 
 # Footer Social
 [params.social]
-facebook = "https://www.facebook.com/pg/staticmania"
-twitter = "https://twitter.com/static_mania"
-github = "https://github.com/StaticMania"
+facebook = "https://www.facebook.com/pg/jgoxkld"
+twitter = "https://twitter.com/jgoxkld"
+github = "https://github.com/vietnampeace"
 
 # Footer Address
 [params.form]
@@ -73,10 +84,10 @@ noidung = "entry.839337160"
 [params]
 
 # Header
-logo = "images/logo.png"
+logo = "images/logo.svg"
 fabFormURL = "https://fabform.io/f/zWMBVeW"
-googleAnalytics = "UA-175025671-2"
-description = "Trung tâm đào tạo nguồn nhân lực xuất khẩu lao động Nhật Bản. Xuất khẩu lao động Nhật Bản, tạo ra cơ hội để đạt được ước mơ của bạn."
+googleAnalytics = "UA-235714187-3"
+description = "Công ty Việt Nam Hòa Bình là trung tâm đào tạo nguồn nhân lực xuất khẩu lao động Nhật Bản. Xuất khẩu lao động Nhật Bản, tạo ra cơ hội để đạt được ước mơ của bạn."
 
 # Footer
 footerTitle = "Cập nhật bản tin mới của VietNam Peace"
@@ -86,3 +97,32 @@ copyright2 = "Copyright ©  <a href=\"https://jgo.vn/\" target=\"_blank\">Jgo</a
 #contact
 email = "info.vietnamhoabinh@gmail.com"
 
+## Open Graph
+images = ["vietnampeace.png"]
+ogLocale = "vi_VN"
+domainTLD = "xkld.pages.dev"
+titleHome = "VietNam Peace | Công ty xuất khẩu lao động Nhật Bản uy tín"
+
+## Twitter Cards
+twitterSite = "@vcr_labs"
+twitterCreator = "@daicinema"
+
+## JSON-LD
+# schemaType = "Person"
+schemaType = "Organization"
+schemaName = "Việt Nam Hòa Bình"
+schemaAuthor = "VietNamPeace"
+schemaAuthorTwitter = "https://twitter.com/daicinema"
+schemaAuthorLinkedIn = "www.linkedin.com/in/daicine"
+schemaAuthorGitHub = "https://github.com/vietnampeace"
+schemaLocale = "vi_VN"
+schemaLogo = "vietnampeace-logo.png"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "vietnampeace.png"
+schemaImageWidth = 1280
+schemaImageHeight = 640
+schemaTwitter = "https://twitter.com/jgoxkld"
+schemaLinkedIn = ""
+schemaGitHub = "https://github.com/vietnampeace/vcrlab"
+schemaSection = "blog"
